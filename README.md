@@ -1,0 +1,5 @@
+Playing around with the Java 11+ HttpClient stuff. May as well explore the Square APIs, as I have a few pain points in the existing Square Dashboard reports:
+ - Tax amounts are shown, but *taxable sales* are not. I need this figure for sales tax filing, and I currently calculate it from memory based on amount (I only have one taxable item and sell very few of them) or drill down to item sales to get quantity numbers and do basic math from there.
+ - Shipping charges are not broken out at all. What usually happens is that numbers don't add up when doing journal entry, so I go back and forth looking for mistakes, eventually realizing that I had some online orders for the period and that the difference is simply what I charged for shipping.
+
+ To be very clear, Square's Java SDK is the appropriate tool for doing real work. Without an object model and data bindings, processing complex JSON in Java is unpleasant.
